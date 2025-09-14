@@ -1,0 +1,29 @@
+cachelib/
+│
+├── go.mod                # module definition (e.g. module github.com/you/cachelib)
+├── go.sum
+│
+├── cache/                # Core cache interfaces & common utilities
+│   ├── cache.go          # Defines Cache interface (Get, Set, Delete, etc.)
+│   └── errors.go         # Custom errors (optional)
+│
+├── lru/                  # LRU implementation
+│   └── lru.go
+│
+├── lfu/                  # LFU implementation
+│   └── lfu.go
+│
+├── fifo/                 # FIFO implementation (if you want)
+│   └── fifo.go
+│
+├── internal/             # Internal helpers (not meant for public use)
+│   └── node.go           # e.g. doubly-linked list node struct
+│
+├── examples/             # Example programs using your cachelib
+│   └── main.go
+│
+├── cache_test.go         # Unit tests for interface-level behaviors
+├── lru_test.go           # Tests for LRU
+├── lfu_test.go           # Tests for LFU
+│
+└── README.md
